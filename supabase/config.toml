@@ -1,0 +1,13 @@
+project_id = "gdoswxduajbweigpgjir"
+
+[functions.chat]
+verify_jwt = false
+
+[functions.generate-slides]
+verify_jwt = false
+
+[functions.scrape-url]
+verify_jwt = false
+
+[functions.web-search]
+verify_jwt = false

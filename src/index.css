@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Text:wght@400;500;700&display=swap');
+
+@layer base {
+  :root {
+    /* Eternity exact color system */
+    --background: 210 17% 98%;
+    --foreground: 220 17% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 17% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 17% 14%;
+
+    --primary: 217 89% 61%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 17% 95%;
+    --secondary-foreground: 220 17% 30%;
+
+    --muted: 210 14% 93%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 217 89% 95%;
+    --accent-foreground: 217 89% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 217 89% 61%;
+
+    --radius: 0.5rem;
+
+    /* Eternity specific tokens */
+    --surface-dim: 210 17% 96%;
+    --surface-container: 210 14% 93%;
+    --on-surface: 220 17% 14%;
+    --on-surface-variant: 220 9% 46%;
+    --outline: 220 10% 78%;
+    --outline-variant: 220 13% 90%;
+    --primary-container: 217 89% 93%;
+    --on-primary-container: 217 89% 25%;
+    --chat-bubble-user: 217 89% 95%;
+    --chat-bubble-ai: 0 0% 100%;
+    --studio-bg: 210 17% 96%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 9% 46%;
+    --sidebar-primary: 217 89% 61%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 89% 95%;
+    --sidebar-accent-foreground: 217 89% 40%;
+    --sidebar-border: 220 13% 90%;
+    --sidebar-ring: 217 89% 61%;
+  }
+
+  .dark {
+    --background: 220 17% 8%;
+    --foreground: 210 17% 92%;
+    --card: 220 15% 11%;
+    --card-foreground: 210 17% 92%;
+    --popover: 220 15% 11%;
+    --popover-foreground: 210 17% 92%;
+    --primary: 217 89% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 210 17% 85%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 217 40% 18%;
+    --accent-foreground: 217 89% 70%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 17% 92%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 217 89% 65%;
+    --surface-dim: 220 15% 10%;
+    --surface-container: 220 15% 13%;
+    --on-surface: 210 17% 92%;
+    --on-surface-variant: 215 15% 55%;
+    --outline: 220 10% 30%;
+    --outline-variant: 220 15% 18%;
+    --primary-container: 217 40% 18%;
+    --on-primary-container: 217 89% 70%;
+    --chat-bubble-user: 217 40% 15%;
+    --chat-bubble-ai: 220 15% 13%;
+    --studio-bg: 220 15% 10%;
+    --sidebar-background: 220 17% 9%;
+    --sidebar-foreground: 215 15% 55%;
+    --sidebar-primary: 217 89% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 40% 18%;
+    --sidebar-accent-foreground: 217 89% 70%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 217 89% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Google Sans', 'Google Sans Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--outline-variant)) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--outline-variant));
+    border-radius: 3px;
+  }
+}
