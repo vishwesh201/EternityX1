@@ -155,14 +155,14 @@ export default function Notebook() {
         </div>
       </header>
 
-      <div className="flex-1 flex overflow-hidden">
-        <div className="w-72 border-r border-outline-variant bg-card shrink-0 flex flex-col overflow-hidden">
+      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden">
+        <div className="order-1 lg:order-none w-full lg:w-72 border-b lg:border-b-0 lg:border-r border-outline-variant bg-card shrink-0 flex flex-col overflow-hidden">
           <SourcesPanel notebookId={id || ""} />
         </div>
-        <div className="flex-1 overflow-hidden bg-background">
+        <div className="order-2 lg:order-none flex-1 overflow-hidden bg-background">
           <ChatPanel notebookId={id || ""} />
         </div>
-        <div className="w-80 border-l border-outline-variant bg-studio shrink-0 flex flex-col overflow-hidden">
+        <div className="order-3 lg:order-none w-full lg:w-80 border-t lg:border-t-0 lg:border-l border-outline-variant bg-studio shrink-0 flex flex-col overflow-hidden">
           <StudioPanel notebookId={id || ""} />
         </div>
       </div>

@@ -65,7 +65,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-background">
       {/* Top bar — matches EternityX */}
-      <header className="h-16 border-b border-outline-variant flex items-center justify-between px-6">
+      <header className="h-16 border-b border-outline-variant flex items-center justify-between px-4 sm:px-6">
         <div className="flex items-center gap-2.5">
           <img src="/eternity-logo.svg" alt="EternityX" className="w-8 h-8 rounded-full bg-background object-cover" />
           <span className="text-lg font-medium text-foreground tracking-tight">EternityX</span>
@@ -79,7 +79,7 @@ export default function Dashboard() {
         </button>
       </header>
 
-      <div className="max-w-5xl mx-auto px-6 py-12">
+      <div className="max-w-5xl mx-auto px-4 py-8 sm:px-6 sm:py-12">
         {/* Welcome section */}
         <div className="text-center mb-10">
           <h1 className="text-3xl font-normal text-foreground mb-2">
